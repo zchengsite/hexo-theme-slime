@@ -1,0 +1,74 @@
+.placeholder-bar {
+  height: 5rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 10;
+  background-color: #fff;
+  transition: height 0.3s ease-in-out, box-shadow 0.3s ease;
+  &.not-at-the-top {
+    height: 3.5rem;
+    box-shadow: 0px 5px 10px 0px #fbfbfc;
+  }
+  .site-nav {
+    max-width: 80rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: unset;
+    @media (max-width: 85rem) {
+      padding: 0 1.5rem;
+    }
+    .site-nav-left {
+      .site-logo {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        margin: 0 10px;
+        .avatar {
+          padding-right: 10px;
+          img {
+            max-height: 50px;
+            max-width: 50px;
+          }
+        }
+        span {
+          color: #666;
+          font-size: 1.7rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .site-nav-right {
+      display: flex;
+      .nav-options {
+        padding-right: 20px;
+      }
+      ul li {
+        padding: 5px;
+        margin: 0 10px;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 748px) {
+        .nav-options {
+          display: none;
+        }
+      }
+      .nav-others {
+        .folded-button {
+          display: none;
+        }
+        @media (max-width: 748px) {
+          .folded-button {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
